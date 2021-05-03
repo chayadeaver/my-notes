@@ -24,9 +24,11 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 
 gem 'bootstrap', '~> 5.0.0.beta3'
+gem 'popper_js', '~> 2.9.2'
 gem 'rspec', '~> 3.10'
 
 gem 'jquery-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
