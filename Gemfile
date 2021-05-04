@@ -26,7 +26,7 @@ gem 'devise'
 gem 'bootstrap', '~> 5.0.0.beta3'
 gem 'popper_js', '~> 2.9.2'
 gem 'minitest', '5.10.1'
-gem 'database_cleaner'
+
 
 
 gem 'jquery-rails'
@@ -60,6 +60,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'database_cleaner'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
