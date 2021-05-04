@@ -10,7 +10,10 @@
               <%= link_to 'Edit', edit_note_path(note), class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-link" %>
+              <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <span class="nav-link">Created by <%= current_user.name %>, <%= note.created_at.strftime("%a, %b %e, %Y | %l:%M %p") %> </span>
             </li>
           </ul>
         </div>
