@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Note, type: :model do
-  before do
-    @user = User.create!(name: "Chaya", email: "chaya@email.com", password: "password")
-  end
+  let (:user) { User.create!(name: "Chaya", email: "chaya@email.com", password: "password") }
 
   context "with a title" do
-    let(:note) { @user.notes.create!(title: "to do something") }
+    
+    let(:note) { user.notes.create!(title: "to do something") }
 
     it "can have a title without a body" do
       expect(note).to be_valid
@@ -29,7 +28,7 @@ RSpec.describe Note, type: :model do
   end
 
   context "with a body" do
-    let(:note) { @user.notes.create!(body: "not to do something") }
+    let(:note) { user.notes.create!(body: "not to do something") }
 
     it "can have a body without a title" do
       expect(note).to be_valid
