@@ -3,10 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :notes
-  validates :email, presence: true
+  has_many :notes, dependent: :destroy
+  validates :email, :name, presence: true
   validates :email, uniqueness: true
-  validates :name, presence: true
-  validates :name, uniqueness: true
   validates_format_of :email, :with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 end
