@@ -8,7 +8,4 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates_format_of :email, :with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
-  def note_count
-    self.notes.count
-  end
 end
