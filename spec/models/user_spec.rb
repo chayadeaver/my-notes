@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before do
-    User.destroy_all
     @user = User.create!(name: "Chaya", email: "chaya@email.com", password: "password")
     @note1 = @user.notes.create!(title: "to do something")
     @note2 = @user.notes.create!(body: "not to do something")
