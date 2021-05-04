@@ -10,8 +10,10 @@
       </ul>
     </div>
   <% end %>
+  <%= form.text_field :title, placeholder: "Title", class: "form-control mb-3" %>
+  <%= form.text_area :body, placeholder: "Body", class: "form-control mb-3", size: "60x5" %>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Create Note", class: "btn btn-primary mb-3"%>
   </div>
 <% end %>
