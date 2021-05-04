@@ -4,6 +4,10 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="col-auto">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name", class: "form-control mb-3", required: true %>
+  </div>
+
+  <div class="col-auto">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control mb-3", required: true %>
   </div>
 
