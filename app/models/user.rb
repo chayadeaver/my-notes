@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :notes, dependent: :destroy
   validates :email, :name, presence: true
-  validates :email, uniqueness: true
+  validates_uniqueness_of :email
   validates_format_of :email, :with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
 
 end
