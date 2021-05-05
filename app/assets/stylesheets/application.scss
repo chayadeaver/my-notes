@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "./actiontext.scss";
+
 
 html, body {
   padding: 0;
@@ -8,7 +10,6 @@ html, body {
 
 body {
   font-family: 'Roboto Mono', monospace;
-  text-align: center;
 }
 
 h1 {
