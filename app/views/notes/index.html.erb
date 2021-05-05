@@ -2,31 +2,36 @@
 
 <h1><%= current_user.name %>'s Notes</h1>
 
+  <div class="row row-cols-1 row-cols-md-2 g-4">
     <% @notes.each do |note| %>
-      <div class="card border-primary text-center mt-3 mb-3">
-        <div class="card-header">
-          <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item">
-              <%= link_to 'Edit', edit_note_path(note), class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <span class="nav-link">Created by <%= current_user.name %>, <%= note.created_at.strftime("%a, %b %e, %Y | %l:%M %p") %> </span>
-            </li>
-          </ul>
-        </div>
-        <div class="card-body text-primary">
-          <h5 class="card-title">
-            <%= note.title %>
-          </h5>
-          <p class="card-text">
-            <%= note.body %>
-          </p>
+      <div class="col">
+        <div class="card border-primary text-center mt-3 mb-3">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+              <li class="nav-item">
+                <%= link_to 'Edit', edit_note_path(note), class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <span class="nav-link">Created by <%= current_user.name %> on <%= note.created_at.strftime("%a, %b %e, %Y | %l:%M %p") %> </span>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body text-primary">
+            <h5 class="card-title">
+              <%= note.title %>
+            </h5>
+            <p class="card-text">
+              <%= note.body %>
+            </p>
+          </div>
         </div>
       </div>
     <% end %>
+  </div>
+    
 
 
 
