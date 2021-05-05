@@ -55,16 +55,28 @@ guard :rspec, cmd: "bundle exec rspec" do
 
   # Rails config changes
   watch(rails.spec_helper)     { rspec.spec_dir }
-  watch(rails.routes)          { "#{rspec.spec_dir}/routing" }
-  watch(rails.app_controller)  { "#{rspec.spec_dir}/controllers" }
+  watch(rails.routes)          { "spec" }
+  watch(rails.app_controller)  { "spec" }
 
   # Capybara features specs
-  watch(rails.view_dirs)     { |m| rspec.spec.call("features/#{m[1]}") }
-  watch(rails.layouts)       { |m| rspec.spec.call("features/#{m[1]}") }
+  watch(rails.view_dirs)     { "spec/features" }
+  watch(rails.layouts)       { "spec/features" }
 
   # Turnip features and steps
   watch(%r{^spec/acceptance/(.+)\.feature$})
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$}) do |m|
     Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   end
+end
+
+guard :bundler do
+  require 'guard/bundler'
+  require 'guard/bundler/verify'
+  helper = Guard::Bundler::Verify.new
+
+  files = ['Gemfile']
+  files += Dir['*.gemspec'] if files.any? { |f| helper.uses_gemspec?(f) }
+
+  # Assume files are symlinked from somewhere
+  files.each { |file| watch(helper.real_path(file)) }
 end
