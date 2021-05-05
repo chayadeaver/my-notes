@@ -26,7 +26,7 @@ gem 'devise'
 gem 'bootstrap', '~> 5.0.0.beta3'
 gem 'popper_js', '~> 2.9.2'
 gem 'minitest', '5.10.1'
-
+gem 'image_processing'
 
 
 gem 'jquery-rails'
