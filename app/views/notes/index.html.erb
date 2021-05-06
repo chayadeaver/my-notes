@@ -8,6 +8,9 @@
           <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
+                <%= link_to 'Show', note_path(note), class: "nav-link" %>
+              </li>
+              <li class="nav-item">
                 <%= link_to 'Edit', edit_note_path(note), class: "nav-link" %>
               </li>
               <li class="nav-item">
