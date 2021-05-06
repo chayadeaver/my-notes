@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "home#welcome"
   resources :notes
-  devise_for :users, controllers: {registrations: 'registrations'}
+  devise_for :users, controllers: {registrations: 'registrations', confirmations: 'confirmations' }
   devise_scope :user do
     get '/signin', to: 'devise/sessions#new'
     get '/signup', to: 'devise/registrations#new'
