@@ -294,6 +294,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   database_cleaner
+  database_cleaner-active_record
   devise
   guard
   guard-bundler
