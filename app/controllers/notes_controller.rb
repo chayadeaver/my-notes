@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   before_action :set_note, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
+  include NotesHelper
 
   # GET /notes or /notes.json
   def index
@@ -22,7 +23,8 @@ class NotesController < ApplicationController
 
   # POST /notes or /notes.json
   def create
-    @note = current_user.notes.build(note_params)
+    @note = Note.new(note_params)
+    @note = assign_note_creator(@note, current_user)
 
     respond_to do |format|
       if @note.save
@@ -65,6 +67,6 @@ class NotesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def note_params
-      params.require(:note).permit(:title, :body, :user_id)
+      params.require(:note).permit(:title, :body, :user)
     end
 end
