@@ -1,6 +1,11 @@
-<h1 class="font-black text-3xl mb-5 mt-10">Editing Note</h1>
+<div class="bg-blue-200 p-10 rounded-lg shadow-lg max-w-3xl mx-auto text-gray-700 text-center mt-24 max-h-full">
 
-<%= render 'form', note: @note %>
+  <h1 class="font-black text-3xl mb-5 mt-5">Editing Note</h1>
 
-<%= link_to 'Show', @note, class: "btn btn-secondary" %> |
-<%= link_to 'Back', notes_path, class: "btn btn-secondary" %>
+  <%= render 'form', note: @note %>
+
+  <%= link_to 'Show', @note, class: "btn btn-secondary" %> |
+  <%= link_to 'Back', notes_path, class: "btn btn-secondary" %>
+</div>
+
+

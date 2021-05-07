@@ -1,5 +1,8 @@
-<div class="bg-blue-200 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-gray-700 text-center mt-32">
-  <h1 class="font-black text-3xl">Welcome to NOTES</h1>
+<div class="bg-blue-200 p-10 rounded-lg shadow-lg max-w-lg mx-auto text-gray-700 text-center mt-24">
+
+  <%= image_tag("notes-logo", alt: "notes-logo", class: "shadow-lg") %>
+
+  <h1 class="font-black text-3xl mt-3">Welcome to NOTES</h1>
   <p class="text-lg leading-tight mt-3 font-light">To create and manage your notes, please sign in</p>
   
   <%= button_to "Signin", signin_path, method: :get, class: "btn btn-outline-primary mt-3" %>
