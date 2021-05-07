@@ -1,11 +1,11 @@
 
-<h1><%= current_user.name %>'s Notes</h1>
+<h1 class="font-black text-4xl mt-10 mb-5"><%= current_user.name %>'s Notes</h1>
 
   <div class="row row-cols-1 row-cols-md-2 g-4">
     <% @notes.each do |note| %>
       <div class="col">
-        <div class="card border-primary text-center mt-3 mb-3">
-          <div class="card-header">
+        <div class="card border-primary text-center mx-auto max-w-md ring-4 ">
+          <div class="card-header shadow-inner">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
                 <%= link_to 'Show', note_path(note), class: "nav-link" %>
