@@ -10,8 +10,15 @@
       </ul>
     </div>
   <% end %>
-  <%= form.text_field :title, placeholder: "Title", class: "form-control mb-3" %>
-  <%= form.rich_text_area :body, placeholder: "Body", class: "form-control mb-3", size: "80x5" %>
+
+  <div class="col-auto max-w-xl mx-auto">
+    <%= form.text_field :title, placeholder: "Title", class: "form-input mb-3 rounded-md" %>
+  </div>
+  
+  <div class="col-auto max-w-3xl mx-auto">
+    <%= form.rich_text_area :body, placeholder: "Body", class: "form-textarea mb-3 rounded-md resize border" %>
+  </div>
+  
 
   <div class="actions">
     <%= form.submit "Submit", class: "btn btn-primary mb-3"%>

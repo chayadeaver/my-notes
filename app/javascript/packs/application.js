@@ -19,3 +19,5 @@ ActiveStorage.start()
 //= require_tree.
 require("trix")
 require("@rails/actiontext")
+
+import "stylesheets/application"
