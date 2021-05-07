@@ -1,7 +1,8 @@
 # My Notes 2021
 A note application that allows users to manage their notes.
 
- ![my-notes](app/assets/images/my-notes-demo.gif)[Demo](https://www.loom.com/share/a3edcbc3c2fc4c52b90121c0f9723527)|
+ ![my-notes](app/assets/images/my-notes-demo.gif)
+[Demo](https://www.loom.com/share/a3edcbc3c2fc4c52b90121c0f9723527)|
 [Deployed App](https://my-notes-2021.herokuapp.com/)
 
 ## Features
