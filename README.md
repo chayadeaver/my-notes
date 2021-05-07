@@ -9,9 +9,8 @@ A note application that allows users to manage their notes.
 
 ## Features
 
-* Sign up/Log in with authenticated password
+* Sign up/Log in with authenticated password.
 * Once signed in, users can create, view, edit and delete their notes.
-*
 
 ## Tech Used
 
@@ -28,9 +27,9 @@ A note application that allows users to manage their notes.
 
 ## To Install
 
-* Clone this repo to local machine `git clone <this-repo>`
-* Cd into directory and run `bundle install` to install dependencies
-* Make sure Postgres app is running. To install Postgres app, go [here](https://www.postgresql.org/download/)
-* Run `rails db:create` to create a database
-* Run `rails db:migrate` to create tables in database
-* Run `rails s` to run server
+* Clone this repo to local machine `git clone <this-repo>`.
+* Cd into directory and run `bundle install` to install dependencies.
+* Make sure Postgres app is running. To install Postgres app, go [here](https://www.postgresql.org/download/).
+* Run `rails db:create` to create a database.
+* Run `rails db:migrate` to create tables in database.
+* Run `rails s` to run server.
